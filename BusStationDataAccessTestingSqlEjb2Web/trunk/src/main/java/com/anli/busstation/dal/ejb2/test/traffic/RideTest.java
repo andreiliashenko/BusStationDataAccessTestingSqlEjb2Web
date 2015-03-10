@@ -2,7 +2,7 @@ package com.anli.busstation.dal.ejb2.test.traffic;
 
 import com.anli.busstation.dal.ejb2.entities.geography.StationImpl;
 import com.anli.busstation.dal.ejb2.entities.traffic.RideImpl;
-import com.anli.busstation.dal.ejb2.factories.ProxyFactory;
+import com.anli.busstation.dal.ejb2.factories.Ejb2ProviderProxyFactory;
 import com.anli.busstation.dal.ejb2.test.Ejb2FixtureCreator;
 import com.anli.busstation.dal.interfaces.entities.geography.Station;
 import com.anli.busstation.dal.interfaces.entities.traffic.Ride;
@@ -49,7 +49,7 @@ public class RideTest extends com.anli.busstation.dal.sql.test.traffic.RideTest 
 
     @Override
     protected ProviderFactory getFactory() {
-        return new ProxyFactory();
+        return new Ejb2ProviderProxyFactory();
     }
 
     @Override
