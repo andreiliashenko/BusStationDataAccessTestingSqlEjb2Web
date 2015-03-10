@@ -4,7 +4,7 @@ import com.anli.busstation.dal.ejb2.entities.staff.DriverImpl;
 import com.anli.busstation.dal.ejb2.entities.staff.EmployeeImpl;
 import com.anli.busstation.dal.ejb2.entities.staff.MechanicImpl;
 import com.anli.busstation.dal.ejb2.entities.staff.SalesmanImpl;
-import com.anli.busstation.dal.ejb2.factories.ProxyFactory;
+import com.anli.busstation.dal.ejb2.factories.Ejb2ProviderProxyFactory;
 import com.anli.busstation.dal.ejb2.test.Ejb2FixtureCreator;
 import com.anli.busstation.dal.interfaces.entities.staff.Driver;
 import com.anli.busstation.dal.interfaces.entities.staff.Employee;
@@ -56,7 +56,7 @@ public class EmployeeTest extends com.anli.busstation.dal.sql.test.staff.Employe
 
     @Override
     protected ProviderFactory getFactory() {
-        return new ProxyFactory();
+        return new Ejb2ProviderProxyFactory();
     }
 
     @Override

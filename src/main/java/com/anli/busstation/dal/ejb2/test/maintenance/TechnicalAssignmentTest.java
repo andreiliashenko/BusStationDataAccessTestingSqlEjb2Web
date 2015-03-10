@@ -4,7 +4,7 @@ import com.anli.busstation.dal.ejb2.entities.maintenance.BusRefuellingImpl;
 import com.anli.busstation.dal.ejb2.entities.maintenance.BusRepairmentImpl;
 import com.anli.busstation.dal.ejb2.entities.maintenance.StationServiceImpl;
 import com.anli.busstation.dal.ejb2.entities.maintenance.TechnicalAssignmentImpl;
-import com.anli.busstation.dal.ejb2.factories.ProxyFactory;
+import com.anli.busstation.dal.ejb2.factories.Ejb2ProviderProxyFactory;
 import com.anli.busstation.dal.ejb2.test.Ejb2FixtureCreator;
 import com.anli.busstation.dal.interfaces.entities.maintenance.BusRefuelling;
 import com.anli.busstation.dal.interfaces.entities.maintenance.BusRepairment;
@@ -61,7 +61,7 @@ public class TechnicalAssignmentTest extends com.anli.busstation.dal.sql.test.ma
 
     @Override
     protected ProviderFactory getFactory() {
-        return new ProxyFactory();
+        return new Ejb2ProviderProxyFactory();
     }
 
     @Override

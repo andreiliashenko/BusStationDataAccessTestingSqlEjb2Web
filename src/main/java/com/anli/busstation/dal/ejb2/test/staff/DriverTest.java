@@ -1,7 +1,7 @@
 package com.anli.busstation.dal.ejb2.test.staff;
 
 import com.anli.busstation.dal.ejb2.entities.staff.DriverImpl;
-import com.anli.busstation.dal.ejb2.factories.ProxyFactory;
+import com.anli.busstation.dal.ejb2.factories.Ejb2ProviderProxyFactory;
 import com.anli.busstation.dal.ejb2.test.Ejb2FixtureCreator;
 import com.anli.busstation.dal.interfaces.entities.staff.Driver;
 import com.anli.busstation.dal.interfaces.factories.ProviderFactory;
@@ -26,7 +26,7 @@ public class DriverTest extends com.anli.busstation.dal.sql.test.staff.DriverTes
 
     @Override
     protected ProviderFactory getFactory() {
-        return new ProxyFactory();
+        return new Ejb2ProviderProxyFactory();
     }
 
     @Override

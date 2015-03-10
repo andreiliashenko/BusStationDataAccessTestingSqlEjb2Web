@@ -1,7 +1,7 @@
 package com.anli.busstation.dal.ejb2.test.vehicles;
 
 import com.anli.busstation.dal.ejb2.entities.vehicles.TechnicalStateImpl;
-import com.anli.busstation.dal.ejb2.factories.ProxyFactory;
+import com.anli.busstation.dal.ejb2.factories.Ejb2ProviderProxyFactory;
 import com.anli.busstation.dal.ejb2.test.Ejb2FixtureCreator;
 import com.anli.busstation.dal.interfaces.entities.vehicles.TechnicalState;
 import com.anli.busstation.dal.interfaces.factories.ProviderFactory;
@@ -21,7 +21,7 @@ public class TechnicalStateTest extends com.anli.busstation.dal.sql.test.vehicle
 
     @Override
     protected ProviderFactory getFactory() {
-        return new ProxyFactory();
+        return new Ejb2ProviderProxyFactory();
     }
 
     @Override
