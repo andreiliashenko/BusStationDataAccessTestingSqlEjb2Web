@@ -1,7 +1,7 @@
 package com.anli.busstation.dal.ejb2.test.maintenance;
 
 import com.anli.busstation.dal.ejb2.entities.maintenance.BusRefuellingImpl;
-import com.anli.busstation.dal.ejb2.factories.Ejb2ProviderProxyFactory;
+import com.anli.busstation.dal.ejb2.factories.ProviderProxyFactory;
 import com.anli.busstation.dal.ejb2.test.Ejb2FixtureCreator;
 import com.anli.busstation.dal.interfaces.entities.maintenance.BusRefuelling;
 import com.anli.busstation.dal.interfaces.factories.ProviderFactory;
@@ -28,7 +28,7 @@ public class BusRefuellingTest extends com.anli.busstation.dal.sql.test.maintena
 
     @Override
     protected ProviderFactory getFactory() {
-        return new Ejb2ProviderProxyFactory();
+        return new ProviderProxyFactory();
     }
 
     @Override

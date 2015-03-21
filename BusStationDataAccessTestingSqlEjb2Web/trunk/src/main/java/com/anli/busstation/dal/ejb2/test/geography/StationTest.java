@@ -1,7 +1,7 @@
 package com.anli.busstation.dal.ejb2.test.geography;
 
 import com.anli.busstation.dal.ejb2.entities.geography.StationImpl;
-import com.anli.busstation.dal.ejb2.factories.Ejb2ProviderProxyFactory;
+import com.anli.busstation.dal.ejb2.factories.ProviderProxyFactory;
 import com.anli.busstation.dal.ejb2.test.Ejb2FixtureCreator;
 import com.anli.busstation.dal.interfaces.entities.geography.Station;
 import com.anli.busstation.dal.interfaces.factories.ProviderFactory;
@@ -27,7 +27,7 @@ public class StationTest extends com.anli.busstation.dal.sql.test.geography.Stat
 
     @Override
     protected ProviderFactory getFactory() {
-        return new Ejb2ProviderProxyFactory();
+        return new ProviderProxyFactory();
     }
 
     @Override
