@@ -14,7 +14,8 @@ import java.util.List;
 public class RegionTest extends com.anli.busstation.dal.sql.test.geography.RegionTest {
 
     @Override
-    protected Region getNewRegion(BigInteger id, Integer code, String name, List<BigInteger> stationList, boolean load) {
+    protected Region getNewRegion(BigInteger id, Integer code, String name,
+            List<BigInteger> stationList, boolean load) {
         RegionImpl region = new RegionImpl();
         region.setId(id);
         region.setCode(code);

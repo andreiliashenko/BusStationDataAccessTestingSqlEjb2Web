@@ -16,11 +16,12 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 import org.joda.time.DateTime;
 
-public class TechnicalAssignmentTest extends com.anli.busstation.dal.sql.test.maintenance.TechnicalAssignmentTest {
+public class TechnicalAssignmentTest
+        extends com.anli.busstation.dal.sql.test.maintenance.TechnicalAssignmentTest {
 
     @Override
-    protected BusRefuelling getNewRefuelling(BigInteger id, BigInteger mechanicId, DateTime beginTime, DateTime endTime,
-            BigDecimal cost, BigInteger busId, Integer volume, boolean load) {
+    protected BusRefuelling getNewRefuelling(BigInteger id, BigInteger mechanicId, DateTime beginTime,
+            DateTime endTime, BigDecimal cost, BigInteger busId, Integer volume, boolean load) {
         BusRefuellingImpl busRefuelling = new BusRefuellingImpl();
         busRefuelling.setId(id);
         busRefuelling.setMechanic(getMechanicById(mechanicId, load));
@@ -33,8 +34,8 @@ public class TechnicalAssignmentTest extends com.anli.busstation.dal.sql.test.ma
     }
 
     @Override
-    protected BusRepairment getNewRepairment(BigInteger id, BigInteger mechanicId, DateTime beginTime, DateTime endTime,
-            BigDecimal cost, BigInteger busId, BigDecimal price, boolean load) {
+    protected BusRepairment getNewRepairment(BigInteger id, BigInteger mechanicId, DateTime beginTime,
+            DateTime endTime, BigDecimal cost, BigInteger busId, BigDecimal price, boolean load) {
         BusRepairmentImpl repairment = new BusRepairmentImpl();
         repairment.setId(id);
         repairment.setMechanic(getMechanicById(mechanicId, load));

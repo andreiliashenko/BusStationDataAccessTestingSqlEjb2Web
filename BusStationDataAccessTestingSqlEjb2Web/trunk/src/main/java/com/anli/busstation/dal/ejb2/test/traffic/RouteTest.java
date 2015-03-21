@@ -17,7 +17,7 @@ import java.util.List;
 public class RouteTest extends com.anli.busstation.dal.sql.test.traffic.RouteTest {
 
     @Override
-    protected Route getNewRoute(BigInteger id, String numCode, 
+    protected Route getNewRoute(BigInteger id, String numCode,
             BigDecimal ticketPrice, List<BigInteger> routePoints, List<BigInteger> rides, boolean load) {
         RouteImpl route = new RouteImpl();
         route.setId(id);
@@ -75,5 +75,4 @@ public class RouteTest extends com.anli.busstation.dal.sql.test.traffic.RouteTes
         impl.setRides(null);
         return impl;
     }
-
 }

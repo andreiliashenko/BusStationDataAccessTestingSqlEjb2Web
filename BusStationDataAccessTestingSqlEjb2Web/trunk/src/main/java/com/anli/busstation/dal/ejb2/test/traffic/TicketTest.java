@@ -15,8 +15,9 @@ import org.joda.time.DateTime;
 public class TicketTest extends com.anli.busstation.dal.sql.test.traffic.TicketTest {
 
     @Override
-    protected Ticket getNewTicket(BigInteger id, BigInteger arrivalPointId, String customerName, BigInteger departurePointId,
-            BigDecimal price, DateTime saleDate, BigInteger salesmanId, Integer seat, boolean sold, boolean load) {
+    protected Ticket getNewTicket(BigInteger id, BigInteger arrivalPointId, String customerName,
+            BigInteger departurePointId, BigDecimal price, DateTime saleDate, BigInteger salesmanId,
+            Integer seat, boolean sold, boolean load) {
         TicketImpl ticket = new TicketImpl();
         ticket.setId(id);
         ticket.setArrivalPoint(getRidePointById(arrivalPointId, load));
