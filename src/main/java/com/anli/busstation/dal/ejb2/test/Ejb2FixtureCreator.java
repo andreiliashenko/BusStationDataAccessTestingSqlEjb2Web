@@ -18,5 +18,4 @@ public class Ejb2FixtureCreator extends SqlFixtureCreator {
     protected ProviderFactory getFactory() {
         return new Ejb2ProviderProxyFactory();
     }
-
 }

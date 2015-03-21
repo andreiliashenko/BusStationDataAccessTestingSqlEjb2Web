@@ -70,5 +70,4 @@ public class RideTest extends com.anli.busstation.dal.sql.test.traffic.RideTest 
         rideImpl.setTickets(null);
         return rideImpl;
     }
-
 }
