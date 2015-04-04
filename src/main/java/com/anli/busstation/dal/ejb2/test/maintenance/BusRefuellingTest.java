@@ -1,11 +1,9 @@
 package com.anli.busstation.dal.ejb2.test.maintenance;
 
 import com.anli.busstation.dal.ejb2.entities.maintenance.BusRefuellingImpl;
-import com.anli.busstation.dal.ejb2.factories.ProviderProxyFactory;
-import com.anli.busstation.dal.ejb2.test.Ejb2FixtureCreator;
+import com.anli.busstation.dal.ejb2.test.Ejb2ModuleAccessor;
 import com.anli.busstation.dal.interfaces.entities.maintenance.BusRefuelling;
-import com.anli.busstation.dal.interfaces.factories.ProviderFactory;
-import com.anli.busstation.dal.test.FixtureCreator;
+import com.anli.busstation.dal.test.ModuleAccessor;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import org.joda.time.DateTime;
@@ -27,17 +25,7 @@ public class BusRefuellingTest extends com.anli.busstation.dal.sql.test.maintena
     }
 
     @Override
-    protected ProviderFactory getFactory() {
-        return new ProviderProxyFactory();
-    }
-
-    @Override
-    protected void setEntityId(BusRefuelling entity, BigInteger id) {
-        ((BusRefuellingImpl) entity).setId(id);
-    }
-
-    @Override
-    protected FixtureCreator getFixtureCreator() {
-        return new Ejb2FixtureCreator();
+    protected ModuleAccessor createModuleAccessor() {
+        return new Ejb2ModuleAccessor();
     }
 }

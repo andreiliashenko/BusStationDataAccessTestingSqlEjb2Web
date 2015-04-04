@@ -1,11 +1,9 @@
 package com.anli.busstation.dal.ejb2.test.staff;
 
 import com.anli.busstation.dal.ejb2.entities.staff.MechanicImpl;
-import com.anli.busstation.dal.ejb2.factories.ProviderProxyFactory;
-import com.anli.busstation.dal.ejb2.test.Ejb2FixtureCreator;
+import com.anli.busstation.dal.ejb2.test.Ejb2ModuleAccessor;
 import com.anli.busstation.dal.interfaces.entities.staff.Mechanic;
-import com.anli.busstation.dal.interfaces.factories.ProviderFactory;
-import com.anli.busstation.dal.test.FixtureCreator;
+import com.anli.busstation.dal.test.ModuleAccessor;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import org.joda.time.DateTime;
@@ -25,17 +23,7 @@ public class MechanicTest extends com.anli.busstation.dal.sql.test.staff.Mechani
     }
 
     @Override
-    protected ProviderFactory getFactory() {
-        return new ProviderProxyFactory();
-    }
-
-    @Override
-    protected void setEntityId(Mechanic entity, BigInteger id) {
-        ((MechanicImpl) entity).setId(id);
-    }
-
-    @Override
-    protected FixtureCreator getFixtureCreator() {
-        return new Ejb2FixtureCreator();
+    protected ModuleAccessor createModuleAccessor() {
+        return new Ejb2ModuleAccessor();
     }
 }
